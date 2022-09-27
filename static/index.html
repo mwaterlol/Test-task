@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cargo_calculator_test</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="frame">
+        <div class="picture">
+            <img src="templates/img.png">
+        </div>
+        <button class="button_more" onmouseover="onHover();" onmouseout="offHover();">
+            <div class="button_more_text">Перейти на страницу сервиса</div>
+            <img id="button_more_img" src="templates/icon.png">
+        </button>
+        <div class="title">
+            <div class="text_extra">
+                Наш сервис
+            </div>
+            <div class="title_and_text">
+                <div class="heading">
+                    Калькулятор доставки
+                </div>
+                <div class="text_calc">
+                    Рассчитайте стоимость доставки груза для <strong>более чем 40 грузовых компаний</strong><br>и выбрать наилучшее с точки зрения цены и скорости предложение
+                </div>
+            </div>
+        </div>
+        <div class="inputs">
+            <form action="/" method="post" id="form_params">
+                <div class="row row-cols-2" id="row_1">
+                    <div class="col" id="from">
+                        <p id="from_text">Откуда</p>
+                        
+                        <input id="from_input" name="from_input" placeholder="Санкт-Петербург" list="cities">
+                        <div id="incorrect_from">Укажите корректный город</div>
+                    </div>
+                    <div class="col" id="to">
+                        <p id="to_text">Куда</p>
+                        <p><input id="to_input" name="to_input" placeholder="Владивосток" list="cities"></p>
+                        <div id="incorrect_to">Укажите корректный город</div>
+                    </div>
+                    <datalist id="cities">
+                        <option value="Москва"></option>
+                        <option value="Санкт-Петербург"></option>
+                        <option value="Казань"></option>
+                        <option value="Владивосток"></option>
+                        <option value="Астрахань"></option>
+                        <option value="Ростов-на-Дону"></option>
+                        <option value="Волгоград"></option>
+                        <option value="Новосибирск"></option>
+                        <option value="Краснодар"></option>
+                        <option value="Красноярск"></option>
+                    </datalist>
+                </div>
+                <div class="row row-cols-5" id="row_2">
+                    <div class="col" id="length">
+                        <p id="length_text">Длина(м)</p>
+                        <p><input id="input_length" placeholder="394" name="input_length"></p>
+                    </div>
+                    <div class="col" id="width">
+                        <p id="width_text">Ширина(м)</p>
+                        <p><input id="input_width" placeholder="1917" name="input_width"></p>
+                    </div>
+                    <div class="row" id="height">
+                        <p id="height_text">Высота(м)</p>
+                        <p><input id="input_height" placeholder="42" name="input_height"></p>
+                    </div>
+                    <div class="col" id="weight">
+                        <p id="weigth_text">Вес(кг)</p>
+                        <p><input id="input_weight" placeholder="54" name="input_weight"></p>
+                    </div>
+                    <div class="col" id="ammount">
+                        <p id="ammount_text">Число мест</p>
+                        <p><input id="input_ammount" placeholder="13" name="input_ammount"></p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="buttons">
+            <div class="row row-cols-2">
+                <div class="col">
+                    <div class="button_1">
+                        <button type="button" id="button_1_1" onclick="getInputValueForm();"><p id="text_button_1">Рассчитать</p></button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="button_2">
+                        <button type="button" id="button_2_2" onclick="getInputValueForm(); "><p id="text_button_2">Выгрузить результаты в Excel</p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</body>
+</html>
