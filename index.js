@@ -12,10 +12,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/static/index.html')
     
 })
-//If on the client-side we didnt get mistakes with the values we send back a new page with the sum of the values 
+//If on the client-side we didnt get mistakes with the values we send back the sum of the values 
 app.post('/', (req, res, next) => {
-     let paramsSum = Number(req.body.input_length) + Number(req.body.input_width) + Number(req.body.input_height) + Number(req.body.input_weight) + Number(req.body.input_ammount);
-        res.send(`<h1> Sum of the params: ${paramsSum} </h1>`)
+    res.send(req.body.sum);
 })
 //Starting server
 app.listen(PORT, () => {
