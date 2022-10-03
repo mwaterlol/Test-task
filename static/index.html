@@ -14,14 +14,14 @@
 </head>
 <body>
     <div class="frame">
-        <div id="picture" class="col-3">
+        <div id="picture" class="col">
             <img src="/templates/img.png">
         </div>
         <button class="button_more" onmouseover="onHover();" onmouseout="offHover();">
             <div class="button_more_text">Перейти на страницу сервиса</div>
             <img id="button_more_img" src="/templates/icon.png">
         </button>
-        <div class="col-9" id="title">
+        <div class="col" id="title">
             <div class="text_extra">
                 Наш сервис
             </div>
@@ -37,13 +37,13 @@
         <div class="inputs">
             <form action="/" method="post" id="form_params">
                 <div class="row row-cols-2" id="row_1">
-                    <div class="col-xs-12" id="from">
+                    <div class="col" id="from">
                         <p id="from_text">Откуда</p>
                         
                         <input id="from_input" name="from_input" placeholder="Санкт-Петербург" list="cities">
                         <div id="incorrect_from">Укажите корректный город</div>
                     </div>
-                    <div class="col-xs-12" id="to">
+                    <div class="col" id="to">
                         <p id="to_text">Куда</p>
                         <p><input id="to_input" name="to_input" placeholder="Владивосток" list="cities"></p>
                         <div id="incorrect_to">Укажите корректный город</div>
@@ -62,11 +62,11 @@
                     </datalist>
                 </div>
                 <div class="row row-cols-5" id="row_2">
-                    <div class="col-sm" id="length">
+                    <div class="col" id="length">
                         <p id="length_text">Длина(м)</p>
                         <p><input id="input_length" placeholder="394" name="input_length"></p>
                     </div>
-                    <div class="col-sm" id="width">
+                    <div class="col" id="width">
                         <p id="width_text">Ширина(м)</p>
                         <p><input id="input_width" placeholder="1917" name="input_width"></p>
                     </div>
@@ -74,11 +74,11 @@
                         <p id="height_text">Высота(м)</p>
                         <p><input id="input_height" placeholder="42" name="input_height"></p>
                     </div>
-                    <div class="col-sm" id="weight">
+                    <div class="col" id="weight">
                         <p id="weigth_text">Вес(кг)</p>
                         <p><input id="input_weight" placeholder="54" name="input_weight"></p>
                     </div>
-                    <div class="col-sm" id="ammount">
+                    <div class="col" id="ammount">
                         <p id="ammount_text">Число мест</p>
                         <p><input id="input_ammount" placeholder="13" name="input_ammount"></p>
                     </div>
@@ -87,12 +87,12 @@
         
         <div id="buttons">
             <div class="row row-cols-2">
-                <div class="col-sm">
+                <div class="col">
                     <div class="button_1">
                         <button class="btn" type="button" id="button_1_1" onclick="getInputValueForm();"><p id="text_button_1">Рассчитать</p></button>
                     </div>
                 </div>
-                <div class="col-sm">
+                <div class="col">
                     <div class="button_2">
                         <button class="btn" type="button" id="button_2_2" onclick="getInputValueForm(); "><p id="text_button_2">Выгрузить результаты в Excel</p></button>
                     </div>
